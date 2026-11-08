@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "freellm"
+version = "0.1.0"
+description = "Free, local-first AI coding agent for the terminal. Runs on Ollama / llama.cpp / LM Studio — no API keys, no cost."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "quantumdevelope" }]
+keywords = ["ai", "agent", "cli", "llm", "ollama", "local", "mcp", "free", "open-source"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Build Tools",
+]
+
+[project.urls]
+Homepage = "https://github.com/quantumdevelope/freellm"
+Repository = "https://github.com/quantumdevelope/freellm"
+Issues = "https://github.com/quantumdevelope/freellm/issues"
+
+[project.scripts]
+freellm = "freellm.cli:main"
+
+[project.optional-dependencies]
+dev = []
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+freellm = ["py.typed"]
